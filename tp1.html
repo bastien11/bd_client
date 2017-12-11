@@ -38,10 +38,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Il y a beaucoup de services possible avec l'api Github tel que:</p>
+                    <h5 class="text-center">Il y a beaucoup de services possible avec l'api Github tel que:</h5>
                     <ul class="text-muted">
                         <li>
-                            <p>"Basics authentification: " qui consiste en l'apprentissage des requêtes élmentaires a l'identification et par la suite la connexion d'un utilisateurs a une API.</p>
+                            <p>"Basics authentification: " qui consiste en l'apprentissage des requêtes élémentaires à l'identification et par la suite la connexion d'un utilisateurs à une API.</p>
                         </li>
                         <li>
                             <p>"Discovering ressource for a user: " permet à la suite de "Basics authentification" de gérer des utilisateurs possédant différents privilège au travers d'un jeton OAuth (voir https://developper.github.com/vs/guides/discovering-ressources-for-a-user/).</p>
@@ -56,16 +56,46 @@
 
     </section>
 
-    <section>
+    <section class="bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <p>Nous avons étudié l'API de météo sur laquelle nous avons identifer plusieurs requêtes possible: </p>
-                    <ul>
+                <div class="col-lg-12 text-white">
+                    <h5 class="text-center">Nous avons étudié l'API de météo sur laquelle nous avons identifer plusieurs requêtes possible: </h5>
+                    <ul class="text-faded">
                         <li>
-                            <p></p>
+                            <p>On peut utiliser la méthode GET pour rechercher les prévisions météo par nom de ville sur 5 jours.
+                            La requête possède un argument 'q' qui représente le nom de la ville et le code de l'état.</p>
+                        </li>
+                        <li>
+                            <p>On utilise également la methode GET pour récupérer les prévisions météo par ID de ville. On utilise ici l'agument 'id' pour l'id des villes.</p>
                         </li>
                     </ul>
+                    <p class="text-faded">Pour finir, une requête GET se caractérise par le ? a la fin de l'URL comme ceci: "api.openweathermap.org/data/2.5/forecast?"
+                        et est ensuite suivi des différents arguments qui la composant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h5 class="text-center">Quelques examples de requêtes GET et POST sur l'API météo : </h5>
+            <div class="row">
+                <div class="col-lg-6 text-muted">
+                    <h6>"GET" : </h6>
+                    <p>fetch("api.openweathermap.org/data/2.5/forecast?id=524901")</p>
+                    <p>.then(response => response.JSON) </p>
+                    <p>.then(responseJson => console.log(responseJson)</p>
+                </div>
+                <div class="col-lg-6 text-muted">
+                    <h6>"POST" : </h6>
+                    <p>fetch("api.openweathermap.org/data/2.5/forecast?id=524901",<br>
+                        {<br>
+                        method: "POST"<br>
+                        headers: {<br>'Content-Type': 'application/json',<br>},<br>
+                        })<br>
+                        .then(response => response.JSON)<br>
+                        .then(responseJson => console.log(responseJson)</p>
                 </div>
             </div>
         </div>
