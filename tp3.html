@@ -26,7 +26,12 @@
         <h1>Application mobile : Communication</h1>
         <div class="rows">
             <div class="col-lg-10 text-faded">
-                <p>Introduction: </p>
+                <h5>Contexte d'échange: </h5>
+                <p>Dans la cadre du cours, nous avons appris que dans les base de donées client pour les applications mobiles,
+                    la plupart des données envoyé sont des données primitives (chaîne de caractère, nombre, boolean, tableau...) ou des fichiers.</p>
+                <p>Les fichiers sont répartis en 3 catégories, les fichiers text, les images et les données structurées JSON/XML.</p>
+                <p>C'est avec ces derniers que nous travaillons le plus souvent car ils permettent de créer des webservices qui nous offre la possibilité
+                de faire des requêtes vers la base de donnée.</p>
             </div>
         </div>
     </div>
@@ -36,7 +41,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-
+                <h5>Tâche de fond : </h5>
+                <div class="text-muted">
+                    <p>Nous sommes souvent amené à effectuer nos reqêtes en arrière plan ou à la mise à jour de tel ou tel objet. Pour cela,
+                    on vas créer une classe AsyncTask dans laquel on vas surcharger les méthod correspondant (doInBackground(), onProgressUpdate()...)</p>
+                </div>
             </div>
         </div>
     </div>
@@ -47,16 +56,25 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-white">
-
+                <h5>Communication : </h5>
+                <div class="text-faded">
+                    <p>Possède différents type et cadre d'utilisation mais surtout, différent niveau de sécurité
+                        (taille de donnée, type de réseaux, porté du réseau).</p>
+                    <p>Différent type de transfert : </p>
+                    <ul>
+                        <li>HTTPS via Wifi: sécurité = 1</li>
+                        <li>Cellulaire: sécurité = 1</li>
+                        <li>Propriétaire: sécurité = 3</li>
+                        <li>etc...</li>
+                    </ul>
+                    <p>Dans le cadre des TPs, nous nous sommes plus particulièrement interessé au reqêtes HTTP/HTTPs car elles possèdent
+                    enormément d'API public et/ou privé. Elles nous permettent donc de nous connexter sur le réseau,
+                        d'accèder a l'objet désérié en fonction de la requête utilisé. Par exemple on veut récupérer
+                        dans un videoclub les films de Leonardo Dicaprio sortie en 2017, on vas faire une requête GET
+                        sur le nom d'acteur et l'année. Ce seront nos 2 attribut ajouter a l'URL du WebService qui se trouve sur internet
+                    et se charge de faire la liaison.</p>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="row">
-
         </div>
     </div>
 </section>
