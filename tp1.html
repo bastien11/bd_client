@@ -47,8 +47,6 @@
                             <p>"Discovering ressource for a user: " permet à la suite de "Basics authentification" de gérer des utilisateurs possédant différents privilège au travers d'un jeton OAuth (voir https://developper.github.com/vs/guides/discovering-ressources-for-a-user/).</p>
                         </li>
                         <li>
-                            <p>"Rendering data as graphs: " </p>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -71,7 +69,7 @@
                         </li>
                     </ul>
                     <p class="text-faded">Pour finir, une requête GET se caractérise par le ? a la fin de l'URL comme ceci: "api.openweathermap.org/data/2.5/forecast?"
-                        et est ensuite suivi des différents arguments qui la composant</p>
+                        et est ensuite suivi des différents arguments qui la composant. Ces requetes sont écritent en Javascript.</p>
                 </div>
             </div>
         </div>
@@ -89,11 +87,12 @@
                 </div>
                 <div class="col-lg-6 text-muted">
                     <h6>"POST" : </h6>
-                    <p>fetch("api.openweathermap.org/data/2.5/forecast?id=524901",<br>
+                    <p>fetch("api.openweathermap.org/data/2.5/forecast",<br>
                         {<br>
-                        method: "POST"<br>
+                        method: "POST",<br>
                         headers: {<br>'Content-Type': 'application/json',<br>},<br>
-                        })<br>
+                        }),<br>
+                        body: { id=524901 }<br>
                         .then(response => response.JSON)<br>
                         .then(responseJson => console.log(responseJson)</p>
                 </div>
